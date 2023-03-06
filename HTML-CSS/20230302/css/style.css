@@ -1,0 +1,34 @@
+@font-face {
+  font-family: 'TTTtangsbudaejjigaeB';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/TTTtangsbudaejjigaeB.woff2')
+    format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  background-color: aqua;
+  font-family: 'TTTtangsbudaejjigaeB';
+}
+
+section > * {
+  color: crimson;
+}
+
+/* 자손 선택자 */
+div p {
+  color: azure;
+}
+
+/* 자식 선택자 --> 자손일 경우 적용 안됨(이럴 경우 'div 자식 자식' 써줘야함) */
+div > p {
+  color: azure;
+}
+
+#h {
+  background-color: coral;
+}
+
+p ~ p {
+  text-decoration: underline;
+}
