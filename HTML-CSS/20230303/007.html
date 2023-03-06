@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>박스 꾸미기</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      div {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+        background: linear-gradient(to bottom right, blue, pink);
+        width: 100px;
+        height: 40px;
+        border-radius: 20px;
+        text-align: center;
+        color: white;
+        text-shadow: 1px 1px 0.2em rgba(000, 000, 000, 0.2);
+        line-height: 36px;
+        margin: auto;
+        margin-top: 30px;
+        box-sizing: border-box;
+        border: 2px dashed rgb(220, 211, 222);
+        background-clip: padding-box;
+        /* background 를 주고 밑에 개별속성을 줄때는 개별속성을 밑에 둬야 적용됨 */
+      }
+      /* .stacked-linear {
+        background: linear-gradient(
+            200deg,
+            rgba(255, 0, 0, 0.8),
+            rgba(255, 0, 0, 0) 70.1%
+          ),
+          linear-gradient(
+            127deg,
+            rgba(0, 255, 0, 0.8),
+            rgba(0, 255, 0, 0) 70.1%
+          ),
+          linear-gradient(
+            345deg,
+            rgba(0, 0, 255, 0.8),
+            rgba(0, 0, 255, 0) 70.1%
+          );
+      } */
+
+      .two {
+        border-radius: 0;
+        background: #343434;
+        border: 2px solid #000;
+        box-shadow: inset 2px 2px 0 #4a5568;
+      }
+      .none {
+        line-height: 40px;
+        color: rgb(18, 18, 18);
+        background: white;
+        border: none;
+        border-radius: 0 20px 20px;
+        outline: 1px solid rgb(230, 230, 230);
+        box-shadow: 5px 5px 5px rgba(50, 50, 93, 0.2),
+          0 1px 3px rgba(0, 0, 0, 0.3);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="one">Hello✋</div>
+    <div class="two">Hello✋</div>
+    <div class="none">Hello✋</div>
+  </body>
+</html>
