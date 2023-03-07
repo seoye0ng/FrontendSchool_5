@@ -1,0 +1,91 @@
+@font-face {
+  font-family: 'SpoqaHanSansNeo-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Regular.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: 'SpoqaHanSansNeo-Regular';
+}
+a {
+  text-decoration: none;
+}
+body {
+  background-color: bisque;
+}
+
+.wrap {
+  width: 350px;
+  margin: auto;
+}
+/* 너비값을 100%로 준 이유는 아티클이 어떤 요소 안으로 들어갈수도 있으니까 
+- 어딜 들어가도 그 부모값에 너비를 주면 자동으로 조정이 되기 때문에 (유지보수 용이) */
+.login {
+  /* width: 100%;
+  height: 140px; */
+  background-color: #fff;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+  padding: 18px 16px;
+  font-size: 12px;
+}
+.a11y-hidden {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+.login p {
+  margin: 0 0;
+}
+.btn-login {
+  display: block;
+  background: #711bff;
+  border-radius: 4px;
+  text-align: center;
+  color: #fff;
+  height: 40px;
+  line-height: 40px;
+  margin: 16px 0;
+}
+.btn-login img {
+  height: 18px;
+  vertical-align: middle;
+  margin-right: 0.5em;
+}
+.login-link a {
+  color: #767676;
+}
+/* 인라인요소라서 하나만 float을 줘도 된다.
+블록 요소인 경우 둘 다 플롯을 줘야한다 */
+.login-link a:last-child {
+  float: right;
+}
+.find-id {
+  background-image: url(img/icon-lock.png);
+}
+.join {
+  background-image: url(img/icon-user.png);
+}
+.find-id,
+.join {
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 1.2em;
+  padding-left: 1.4em;
+  /* background: url(../img/icon-lock.png) no-repeat 0 0 / 1em; */
+}
+.find-id + span {
+  display: inline-block;
+  width: 1px;
+  height: 12px;
+  background-color: #767676;
+  vertical-align: middle;
+  margin: 0 4px;
+}

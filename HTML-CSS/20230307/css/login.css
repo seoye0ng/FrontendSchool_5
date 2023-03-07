@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 350px;
+  height: 140px;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+  padding: 19px 16px;
+  margin: auto;
+}
+.login {
+  background-color: #711bff;
+  text-align: center;
+  margin: 18px 0;
+  width: 318px;
+  height: 40px;
+  border-radius: 4px;
+  vertical-align: middle;
+
+  /* padding: 15px 0; */
+}
+.login img {
+  color: #ffffff;
+  height: 22px;
+  line-height: 15px;
+}
+.login span {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: #ffffff;
+  line-height: 15px;
+}
+p {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #000000;
+}
+.icons {
+  text-align: center;
+}
+.icons:first-child {
+  float: left;
+}
+.icon:last-child {
+  float: right;
+}
+.icon {
+  height: 15px;
+  vertical-align: middle;
+}
+.icons span {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #767676;
+}
