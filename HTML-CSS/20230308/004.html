@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>grid layout</title>
+    <style>
+      section {
+        width: 500px;
+        height: 500px;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-areas:
+          'a a a b b' 'a a a b b' 'c c d b b' 'e e f f f'
+          'e e f f f';
+        /* grid-template-columns: 2fr, 1fr, 2fr; */
+        /* grid-template-rows: 2fr, 1fr, 2fr; */
+        /* grid-template-areas:
+          'a a b' 'c d b' 'e f f'; */
+        gap: 10px;
+      }
+      .a {
+        background-color: royalblue;
+        grid-area: a;
+      }
+      .b {
+        background-color: gold;
+        grid-area: b;
+      }
+      .c {
+        background-color: purple;
+        grid-area: c;
+      }
+      .d {
+        background-color: coral;
+        grid-area: d;
+      }
+      .e {
+        background-color: salmon;
+        grid-area: e;
+      }
+      .f {
+        background-color: green;
+        grid-area: f;
+      }
+    </style>
+  </head>
+
+  <body>
+    <section>
+      <div class="a"></div>
+      <div class="b"></div>
+      <div class="c"></div>
+      <div class="d"></div>
+      <div class="e"></div>
+      <div class="f"></div>
+    </section>
+  </body>
+</html>
