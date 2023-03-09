@@ -1,0 +1,89 @@
+body,
+h2,
+p {
+  margin: 0;
+  padding: 0;
+}
+body {
+  padding: 56px 88px;
+}
+.float {
+  width: min(1224px, 100% - 60px);
+  margin: auto;
+}
+
+.container {
+  float: left;
+  width: 288px;
+  /* width: calc((100% - (24px * 3)) / 4); */
+  height: 348px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 0 0 32px 24px;
+  background-color: #fff;
+}
+
+.float {
+  width: calc((100% - (24px * 3)) / 4);
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .float {
+    width: calc((100% - (24px * 2)) / 3);
+  }
+}
+
+@media (min-width: 501px) and (max-width: 640) {
+  .float {
+    width: calc((100% -24px) / 2);
+  }
+}
+
+@media (max-width: 500px) {
+  .float {
+    width: 100%;
+  }
+}
+img {
+  width: 100%;
+  aspect-ratio: 288/196;
+  object-fit: cover;
+  /* height: 196px; */
+  /* border-radius: 8px 8px 0 0; */
+  vertical-align: top;
+}
+.card-text {
+  padding: 24px 16px;
+}
+h2 {
+  font-weight: 700;
+  font-size: 16px;
+  color: #29363d;
+  /* 아래코드 확인해보기 */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+p {
+  font-size: 12px;
+  font-weight: 400;
+  text-align: left;
+  color: #5a6a72;
+  margin: 12px 0 19px;
+  line-height: 20px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  /* 영어는
+  word-break: break-all
+  해주면 꽉채워져서 나옴 */
+}
+h3 {
+  font-size: 14px;
+  text-decoration: underline;
+  color: #29363d;
+  font-weight: 700;
+  padding-left: 6px;
+}
