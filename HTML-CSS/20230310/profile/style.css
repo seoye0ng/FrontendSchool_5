@@ -1,0 +1,136 @@
+h1,
+p,
+h2,
+ul {
+  /* margin: initial */
+  margin: 0;
+  /* padding: initial */
+  padding: 0;
+}
+a {
+  text-decoration-line: none;
+}
+
+li {
+  /* list-style-type: none; */
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+body {
+  background-image: url(images/background.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.wrapper {
+  background-color: #e7e7e7;
+  width: 800px;
+  margin: 40px auto;
+  text-align: center;
+  overflow: hidden;
+  border-radius: 30px;
+}
+
+.header {
+  background-image: url(images/water.jpg);
+  background-size: cover;
+  color: rgb(255, 255, 255);
+  padding: 80px;
+  text-transform: uppercase;
+}
+
+.header img {
+  width: 150px;
+  /* 여기에 color값을 안주면 currentColor값이 숨겨져 있는 것 
+  -> 부모컬러 가져옴 */
+  border: 3px solid;
+  border-radius: 20px;
+  margin: 30px 0;
+}
+
+.header h1 {
+  font-size: 70px;
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.3), 4px 4px 3px rgba(0, 0, 0, 0.2);
+}
+
+.header p {
+  border-top: 4px solid;
+  margin: 0 auto;
+  width: 210px;
+  padding-top: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+}
+
+.contents {
+  text-align: left;
+}
+
+.section,
+.footer {
+  text-transform: capitalize;
+}
+
+.section {
+  background-color: white;
+  /* 여기서 마진 병합현상이 일어남 (section1의 bottom과 section2의 top에서) */
+  margin: 20px;
+  padding: 25px 30px;
+  background-image: url(images/icon-information.png);
+  background-repeat: no-repeat;
+  /* right 끝으로 가서 40px 떨어짐 */
+  background-position: right 40px center;
+  border-radius: 10px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+  color: #ff6600;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.lists {
+  border-left: 4px solid #e7e7e7;
+  padding-left: 10px;
+  font-size: 16px;
+  color: #999;
+  font-weight: 600;
+}
+
+.lists li {
+  padding: 2px 2px;
+}
+
+.email {
+  text-transform: lowercase;
+}
+
+.skills {
+  background-image: url(images/icon-skills.png);
+}
+
+.footer {
+  background-color: #f4f4f4;
+  padding: 25px;
+}
+
+.footer a {
+  color: #d9d9d9;
+  border: 1.5px solid #d9d9d9;
+  padding: 6px 16px;
+  font-size: 16px;
+  border-radius: 30px;
+  margin: 0 3px;
+  transition: all 0.4s ease-out;
+}
+
+.footer a:hover {
+  border: 1.5px solid #ff6600;
+  color: #ff6600;
+}
