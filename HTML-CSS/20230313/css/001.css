@@ -1,0 +1,62 @@
+button {
+  background-color: #343f50;
+  border: 1px solid #1a202c;
+  width: 88px;
+  height: 32px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  color: #cbd5df;
+  box-shadow: inset 1px 1px #4a5568;
+  cursor: pointer;
+}
+
+.one:hover {
+  text-decoration-line: underline;
+  color: #ffffff;
+}
+.one:active {
+  color: #ffffff;
+  box-shadow: inset 1px 1px #262f3e;
+}
+.disabled {
+  color: #4a5568;
+  box-shadow: none;
+}
+
+.two {
+  color: #439aff;
+}
+.two:hover,
+.two:active {
+  text-decoration-line: underline;
+  color: #ffffff;
+  background-color: #439aff;
+  border: 1px solid #459aff;
+}
+.two:hover {
+  box-shadow: inset 1px 1px #73b2ff;
+}
+.two:active {
+  background-color: #439aff;
+  box-shadow: inset 1px 1px #3b78be;
+}
+
+.three {
+  color: #eb5757;
+}
+.three:hover,
+.three:active {
+  text-decoration-line: underline;
+  color: #ffffff;
+  background-color: #eb5757;
+  border: 1px solid #eb5757;
+}
+.three:hover {
+  box-shadow: inset 1px 1px #fd6f6f;
+}
+.three:active {
+  background-color: #eb5757;
+  box-shadow: inset 1px 1px #d94242;
+}
