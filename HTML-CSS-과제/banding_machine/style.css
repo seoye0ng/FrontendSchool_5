@@ -1,0 +1,92 @@
+/* reset */
+body,
+div,
+h1,
+h2,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  /* max-width: 1920px; */
+  min-height: 100vh;
+}
+
+.container {
+  background-color: #eae8fe;
+  width: 100%;
+  /* min-width: calc(100% - 40px); */
+  padding-bottom: 171px;
+}
+
+.logo {
+  width: 360px;
+  margin: 0 auto 68px auto;
+}
+
+.logo img {
+  width: 100%;
+}
+
+.wrapper {
+  display: flex;
+  gap: 28px;
+  justify-content: center;
+}
+
+section {
+  width: 360px;
+  background-color: #fff;
+  box-shadow: inset 0 0 10px red;
+}
+
+.page1 {
+  height: 545px;
+}
+.page2 {
+  height: 50px;
+}
+
+.page3 {
+  height: 475px;
+  margin-top: 20px;
+}
+
+@media (max-width: 760px) {
+  .wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+  .page3 {
+    margin-top: 0;
+  }
+}
+
+/* style */
+.page1 {
+  padding: 31px 27px 28px 27px;
+  box-sizing: border-box;
+}
+.drink-list {
+  width: 306px;
+  height: 272px;
+  box-shadow: inset 0 0 10px green;
+}
+.order-list {
+  margin-top: 20px;
+  height: 194px;
+  width: 306px;
+  box-shadow: inset 0 0 10px green;
+}
+.page2 {
+  padding: 9px 27px;
+  box-sizing: border-box;
+}
+.my-money {
+  width: 306px;
+  height: 32px;
+  box-shadow: inset 0 0 10px green;
+}
