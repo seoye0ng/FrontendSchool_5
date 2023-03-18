@@ -107,6 +107,11 @@ section {
   /* 20 13 6 20 475 */
   height: 100%;
   box-shadow: inset 0 0 10px green;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 13px;
 }
 
 .drink-list .drink-list-card {
@@ -166,4 +171,97 @@ section {
   background: #6327fe;
   border-radius: 22px;
   line-height: 100%;
+}
+
+.buy-list .buy-list-title {
+  /* box-shadow: inset 0 0 10px plum; */
+  font-weight: 700;
+  font-size: 14px;
+  color: #000000;
+}
+.buy-list .buy-list-card {
+  /* box-shadow: inset 0 0 10px purple; */
+  width: 100%;
+  height: 100%;
+  background: #eae8fe;
+  padding: 12px 18px 12px 12px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.buy-list-card::after {
+  content: '';
+  display: inline-block;
+  background: #ffffff;
+  border-radius: 50px;
+  width: 4px;
+  height: 79px;
+  position: absolute;
+  right: 4px;
+  top: 9px;
+}
+.buy-list-card .buy-cola {
+  /* box-shadow: inset 0 0 10px purple; */
+  width: 276px;
+  height: 46px;
+  background-color: #fff;
+  font-weight: 500;
+  font-size: 9px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+
+  /* Gray 1 */
+
+  color: #333333;
+}
+.buy-cola:not(:last-child) {
+  margin-bottom: 6px;
+}
+
+.buy-cola p {
+  margin-left: 38px;
+}
+
+.buy-cola span {
+  font-weight: 500;
+  font-size: 14px;
+  color: #000000;
+  border: 1px solid #bdbdbd;
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.c_original {
+  background: url(images/red.svg) no-repeat 0 0 / 18px;
+  background-position: 10px;
+}
+
+.c_green {
+  background: url(images/green.svg) no-repeat 0 0 / 18px;
+  background-position: 10px;
+}
+
+.c_orange {
+  background: url(images/orange.svg) no-repeat 0 0 / 18px;
+  background-position: 10px;
+}
+
+.c_violet {
+  background: url(images/violet-sold-out.svg) no-repeat 0 0 / 18px;
+  background-position: 10px;
+}
+
+.buy-list .buy-list-total {
+  /* box-shadow: inset 0 0 10px plum; */
+  font-weight: 500;
+  font-size: 12px;
+  color: #000000;
+  margin-left: auto;
 }
