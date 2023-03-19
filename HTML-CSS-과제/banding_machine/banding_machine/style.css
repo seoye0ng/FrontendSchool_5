@@ -45,7 +45,6 @@ body {
 section {
   width: 360px;
   background-color: #fff;
-  box-shadow: inset 0 0 10px red;
 }
 
 .page1 {
@@ -79,13 +78,11 @@ section {
 .page1 .drink-list {
   width: 306px;
   height: 272px;
-  box-shadow: inset 0 0 10px green;
 }
 .page1 .order-list {
   margin-top: 20px;
   height: 194px;
   width: 306px;
-  box-shadow: inset 0 0 10px green;
 }
 
 .page2 {
@@ -95,7 +92,6 @@ section {
 .page2 .my-money {
   width: 306px;
   height: 32px;
-  box-shadow: inset 0 0 10px green;
 }
 
 .page3 {
@@ -104,9 +100,7 @@ section {
 }
 .page3 .buy-list {
   width: 306px;
-  /* 20 13 6 20 475 */
   height: 100%;
-  box-shadow: inset 0 0 10px green;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -114,6 +108,7 @@ section {
   gap: 13px;
 }
 
+/* page1 */
 .drink-list .drink-list-card {
   display: flex;
   gap: 12px;
@@ -132,7 +127,7 @@ section {
   gap: 7px;
   padding: 11px 12px 9px 12px;
   box-sizing: border-box;
-  box-shadow: 0 0 7px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
 }
 
 .check {
@@ -173,6 +168,152 @@ section {
   line-height: 100%;
 }
 
+.order-list {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.order-change-money,
+.order-pay-money,
+.order-cola {
+  display: flex;
+  justify-content: space-between;
+}
+
+.order-list .change-money {
+  background: #eae8fe;
+  border-radius: 5px;
+  color: #000000;
+  font-weight: 500;
+  line-height: 20px;
+  width: 200px;
+  height: 33px;
+  padding: 7px 10px;
+  box-sizing: border-box;
+}
+
+.change-money span:last-child {
+  float: right;
+}
+
+.order-pay-money input {
+  width: 200px;
+  border: 1px solid #bdbdbd;
+  border-radius: 5px;
+  padding-left: 6px;
+  box-sizing: border-box;
+  /* height: 33px; */
+}
+
+.order-pay-money input::placeholder {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 19px;
+  color: #bdbdbd;
+}
+
+.order-colas {
+  display: flex;
+  justify-content: space-between;
+}
+
+.order-list-card {
+  width: 200px;
+  height: 106px;
+  background: #eae8fe;
+  border-radius: 5px;
+  padding: 12px 18px 0 12px;
+  box-sizing: border-box;
+  border: 1px solid #bdbdbd;
+  position: relative;
+  overflow: hidden;
+}
+
+.order-cola {
+  width: 100%;
+  height: 46px;
+  padding: 18px 0 18px 38px;
+  box-sizing: border-box;
+}
+
+.order-cola,
+.buy-cola {
+  font-weight: 500;
+  font-size: 9px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+}
+
+.order-cola:not(:last-child) {
+  margin-bottom: 6px;
+}
+.order-cola p {
+  font-weight: 500;
+  font-size: 9px;
+  line-height: 13px;
+  color: #333333;
+}
+
+.order-list-card::after {
+  content: '';
+  display: inline-block;
+  background: #ffffff;
+  border-radius: 50px;
+  width: 4px;
+  height: 79px;
+  position: absolute;
+  right: 4px;
+  top: 9px;
+}
+
+.order-change-money button,
+.order-pay-money button,
+.order-cola button {
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  width: 94px;
+  height: 33px;
+  border-radius: 5px;
+  border: none;
+  background: #fff;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 19px;
+}
+
+.order-colas button {
+  width: 94px;
+  height: 106px;
+  background: #6327fe;
+  font-weight: 700;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+}
+
+/* page2 */
+.my-money {
+  box-sizing: border-box;
+  padding: 6px 10px;
+  align-items: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000000;
+  width: 306px;
+  height: 32px;
+  background: #eae8fe;
+  border-radius: 5px;
+}
+
+.my-money span:last-child {
+  font-weight: 700;
+  float: right;
+}
+
+/* page3 */
 .buy-list .buy-list-title {
   /* box-shadow: inset 0 0 10px plum; */
   font-weight: 700;
@@ -184,6 +325,8 @@ section {
   width: 100%;
   height: 100%;
   background: #eae8fe;
+  border: 1px solid #bdbdbd;
+  border-radius: 5px;
   padding: 12px 18px 12px 12px;
   box-sizing: border-box;
   position: relative;
@@ -204,13 +347,6 @@ section {
   /* box-shadow: inset 0 0 10px purple; */
   width: 276px;
   height: 46px;
-  background-color: #fff;
-  font-weight: 500;
-  font-size: 9px;
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  border-radius: 5px;
 
   /* Gray 1 */
 
@@ -224,7 +360,8 @@ section {
   margin-left: 38px;
 }
 
-.buy-cola span {
+.buy-cola span,
+.order-cola span {
   font-weight: 500;
   font-size: 14px;
   color: #000000;
@@ -239,22 +376,22 @@ section {
 }
 
 .c_original {
-  background: url(images/red.svg) no-repeat 0 0 / 18px;
+  background: #fff url(images/red.svg) no-repeat 0 0 / 18px;
   background-position: 10px;
 }
 
 .c_green {
-  background: url(images/green.svg) no-repeat 0 0 / 18px;
+  background: #fff url(images/green.svg) no-repeat 0 0 / 18px;
   background-position: 10px;
 }
 
 .c_orange {
-  background: url(images/orange.svg) no-repeat 0 0 / 18px;
+  background: #fff url(images/orange.svg) no-repeat 0 0 / 18px;
   background-position: 10px;
 }
 
 .c_violet {
-  background: url(images/violet-sold-out.svg) no-repeat 0 0 / 18px;
+  background: #fff url(images/violet-sold-out.svg) no-repeat 0 0 / 18px;
   background-position: 10px;
 }
 
