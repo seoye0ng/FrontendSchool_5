@@ -1,0 +1,5 @@
+# ⚙️ Banding_Machine
+
+밴딩머신 구현
+
+URL : https://seoye0ng.github.io/My_Character/
