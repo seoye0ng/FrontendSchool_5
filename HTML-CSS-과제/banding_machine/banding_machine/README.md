@@ -2,4 +2,4 @@
 
 밴딩머신 구현
 
-URL : https://seoye0ng.github.io/My_Character/
+URL : https://seoye0ng.github.io/FrontendSchool_5/HTML-CSS-과제/banding_machine/banding_machine/
