@@ -1,0 +1,141 @@
+:root {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* reset */
+body,
+div,
+h1,
+h2,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style-type: none;
+}
+
+body {
+  background-color: #673399;
+}
+
+.container {
+  width: 1080px;
+  margin: 100px auto;
+}
+
+/* head */
+.head-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.head-title {
+  width: 26%;
+}
+
+.head-title,
+.head-title strong {
+  font-size: 40px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.head-title strong {
+  box-shadow: inset 0 -0.5em orangered;
+}
+
+.head-description::before {
+  content: '';
+  display: inline-block;
+  width: 300px;
+  height: 2px;
+  background-color: #bd8fe8;
+}
+
+.head-description {
+  color: #bd8fe8;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  width: 580px;
+  line-height: 1.5em;
+}
+
+/* article */
+.article-wrapper {
+  margin-top: 100px;
+}
+
+.article-box {
+  box-shadow: inset 0 0 10px rgb(255, 255, 255);
+  display: flex;
+  background-color: #fff;
+}
+
+.article-box:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+.article-cover {
+  width: 26%;
+}
+
+.article-cover p {
+  background-color: rgba(103, 51, 153, 0.4);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: #fff;
+}
+
+.article-box .first {
+  background: url(images/photo01.png) no-repeat 0 0 / cover;
+}
+
+.article-box .second {
+  background: url(images/photo02.png) no-repeat 0 0 / cover;
+}
+
+.article-box .third {
+  background: url(images/photo03.png) no-repeat 0 0 / cover;
+}
+
+.article-content {
+  padding: 24px;
+  flex-grow: 1;
+}
+
+.article-title {
+  font-size: 18px;
+  color: #673399;
+  margin-bottom: 32px;
+}
+
+.article-description {
+  font-size: 14px;
+  color: #464646;
+  font-weight: 500;
+}
+
+.article-description li:not(:last-child) {
+  margin-bottom: 8px;
+}
+.article-description li::before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #bd8fe8;
+  margin-right: 7px;
+}
