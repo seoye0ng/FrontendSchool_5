@@ -1,0 +1,160 @@
+/* reset */
+body,
+div,
+h1,
+h2,
+h3,
+ul,
+p {
+  padding: 0;
+  margin: 0;
+}
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+button {
+  background: none;
+  border: none;
+  font: inherit;
+}
+
+button:not(:disabled) {
+  cursor: pointer;
+}
+
+.a11y-hidden {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+
+/* header */
+.header-title {
+  font-size: 24px;
+  text-align: center;
+}
+.header-title::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 650px;
+  background-color: #bdbdbd;
+  margin: 37px auto 18px auto;
+}
+.header-nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.header-nav-list button {
+  padding: 10px 20px;
+  color: #828282;
+}
+.header-nav-list button.active {
+  font-weight: bold;
+  color: #000;
+}
+
+/* article */
+.movie-card {
+  overflow: hidden;
+  border: 1px solid #bdbdbd;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+.movie-card-contents {
+  padding: 19px 20px 18px;
+}
+.movie-card-img {
+  width: 100%;
+  /* 이미지가 디자인대로 오지않고 직접 크기를 변경해야 할 때
+  aspect-ratio: 180 / 250;
+  object-fit: cover; */
+  border-radius: 8px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  vertical-align: top;
+}
+.movie-card-title {
+  font-size: 16px;
+  margin: 12px 0;
+}
+.ellipsis {
+  /* 말줄임표 */
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.movie-card-info {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 5px;
+  font-size: 13px;
+}
+.movie-card-info li :first-child {
+  color: #828282;
+  margin-right: 5px;
+}
+.star {
+  background: url(img/icon-star.svg) no-repeat 0 0 / 1em;
+  padding-left: 1.3em;
+  /* vertical-align: top; */
+}
+.movie-card-btns {
+  border-top: 1px solid #bdbdbd;
+  background-color: #f2f2f2;
+  display: flex;
+}
+
+.reserve-btn,
+.trailer-btn {
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.reserve-btn {
+  border-right: 1px solid #bdbdbd;
+  border-radius: 0 0 0 10px;
+}
+.trailer-btn {
+  border-radius: 0 0 10px 0;
+}
+.trailer-btn::before {
+  display: inline-block;
+  content: '';
+  background: url(img/icon-play.svg) no-repeat 0 50% / 1em;
+  width: 1.2em;
+  height: 1.2em;
+}
+
+/* main grid */
+main {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(220px, 1fr));
+  gap: 24px 23px;
+  border: 2px solid #bdbdbd;
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 30px;
+  margin-top: 28px;
+}
+.box-wrapper {
+  background-color: #f2f2f2;
+  border: 2px solid #bdbdbd;
+  border-radius: 15px;
+  padding: 40px 30px 30px;
+  width: 1060px;
+  margin: 86px auto 135px;
+}
