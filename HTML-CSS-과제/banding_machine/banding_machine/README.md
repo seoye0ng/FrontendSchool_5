@@ -1,4 +1,4 @@
-# ⚙️ Banding_Machine
+# ⚙️ Vending_Machine
 
 밴딩머신 구현
 
