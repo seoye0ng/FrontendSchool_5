@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>clip-path</title>
+    <style>
+      img {
+        position: absolute;
+        width: 800px;
+        /* clip: rect(0 500px 860px 0); */
+        /* 입력한 값만큼 각 위치부터 잘리게 됨 - 0부터 시작 */
+        /* clip-path: inset(0 0 0 0); */
+        clip-path: inset(0 100px);
+      }
+    </style>
+  </head>
+
+  <body>
+    <img src="img.png" alt="" />
+  </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>checkbox</title>
+    <style>
+      .txt-hide {
+        position: absolute;
+        clip: rect(0 0 0 0);
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+      }
+
+      .labl-hold {
+        position: relative;
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      .labl-hold::before {
+        content: '';
+        display: inline-block;
+        width: 22px;
+        height: 22px;
+        margin-right: 10px;
+        vertical-align: -5px;
+        border: 1px solid black;
+      }
+
+      /* focus-visible
+      포커싱 이벤트가 일어나면 무조건 작동하는 :focus 와는 다르게 키보드 입력이 일어났을 경우만 가상클래스를 적용하게 합니다.
+      특히 접근성을 위해 사용하는 경우 마우스 이벤트로도 작동하는 focus는 시각적인 불편함과 체크를 해제했음에도 포커스되어 있다는 이유로 
+      작동하는 혼란을 줄 수 있기 때문에 focus-visible 이 더 효과적이라고 볼 수 있습니다. */
+      .inp-hold:focus-visible + .labl-hold::before {
+        outline: 2px solid black;
+        outline-offset: 5px;
+      }
+
+      .labl-hold::after {
+        position: absolute;
+        top: 2px;
+        left: 22px;
+        content: '';
+        display: inline-block;
+        width: 22px;
+        height: 22px;
+        background: url(images/checkmark.png) 0 0 / 22px no-repeat;
+        transition: all 0.3s ease;
+        opacity: 0;
+      }
+
+      /* inp-hold가 체크됐을 때 형제인 labl-hold의 after를 선택 */
+      .inp-hold:checked + .labl-hold::after {
+        left: 1px;
+        opacity: 1;
+      }
+    </style>
+  </head>
+
+  <body>
+    <input type="checkbox" name="" id="inpHold" class="inp-hold txt-hide" />
+    <label for="inpHold" class="labl-hold">로그인 상태 유지</label>
+    <!-- 형태-의미-상태 -->
+  </body>
+</html>
