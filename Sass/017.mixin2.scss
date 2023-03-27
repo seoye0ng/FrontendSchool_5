@@ -1,0 +1,17 @@
+// blue
+.card {
+  // 내부에서 사용 권장하지 X
+  @mixin box {
+    width: 100px;
+    height: 100px;
+  }
+
+  @include box;
+  background-color: blue;
+}
+
+//red
+// .profile {
+//   @include box;
+//   background-color: red;
+// }

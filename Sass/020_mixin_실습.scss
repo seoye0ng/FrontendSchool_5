@@ -1,0 +1,27 @@
+@mixin flex($direction) {
+  display: flex;
+  justify-content: $direction;
+  align-items: $direction;
+}
+
+@mixin sizes($size, $radius) {
+  width: $size;
+  height: $size;
+  border-radius: $radius;
+}
+
+.card {
+  @include flex(center);
+}
+
+.card-item {
+  @include sizes(100px, 10%);
+}
+
+.product {
+  @include flex(right);
+}
+
+.product-item {
+  @include sizes(200px, 20%);
+}

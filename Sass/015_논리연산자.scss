@@ -1,0 +1,34 @@
+@debug not true; // false
+@debug not false; // true
+
+@debug true and true; // true
+@debug true and false; // false
+
+@debug true or false; // true
+@debug false or false; // false
+
+// true : 1
+// false : 0
+// or : 합
+// and : 곱
+// 0 이외에 다른 숫자들은 다 true
+
+$value: 32px;
+$color: black;
+// $color: red;
+
+p {
+  @if ($value >=32px and $color == red) {
+    letter-spacing: 1rem;
+  } @else {
+    letter-spacing: 0.5rem;
+  }
+}
+
+.test {
+  @if ($value >=32px or $color == red) {
+    letter-spacing: 1rem;
+  } @else {
+    letter-spacing: 0.5rem;
+  }
+}
