@@ -1,0 +1,21 @@
+<h1>자기소개</h1>
+<!-- 이벤트 함수: 이벤트(키보드를 누를 때마다) => 이벤트 핸들링(글자 수를 세주어라) -->
+<!-- 이벤트 함수 onkeydown를 사용해 키보드를 누르면 counter함수가 실행 -->
+<textarea class="form-control" rows="3" id="jasoseol" onkeydown="counter();">
+저는 인성 문제가 없습니다.</textarea
+>
+<span id="count">(0/200)</span>
+
+<script>
+  // 글자 수 세주는 함수로 묶어주기
+  function counter() {
+    var content = document.getElementById('jasoseol').value;
+    if (content.length > 200) {
+      // substring()을 사용해 글자 수 제한하기
+      content = content.substring(0, 200);
+      document.getElementById('jasoseol').value = content;
+    }
+    document.getElementById('count').innerHTML = '(' + content.length + '/200)';
+  }
+  counter();
+</script>

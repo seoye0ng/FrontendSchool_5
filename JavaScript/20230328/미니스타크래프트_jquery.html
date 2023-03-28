@@ -1,0 +1,35 @@
+<h1 id="hp">HP: 3</h1>
+<div class="background">
+  <img id="drone" src="drone.png" alt="drone" />
+  <img id="spit" src="spit.png" alt="spit" />
+  <img id="bunker" src="bunker.png" alt="bunker" />
+</div>
+
+<script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"
+></script>
+
+<script>
+  var hp = 3;
+  // 익명 함수 - 함수를 한번만 사용할 경우 효율적 -> 함수를 정의하는 과정없이 바로 호출
+  $('#drone').click(function () {
+    // (드론의 침)이미지 나타내기
+    $('#spit').fadeIn();
+    // (드론의 침)이미지 움직이기
+    $('#spit').animate({ left: '+=250' });
+    // (드론의 침)이미지 없애주기 - 이때 콜백함수를 넣어줘서 fadeOut이 실행된 후 콜백함수가 실행되도록 함
+    $('#spit').fadeOut(function () {
+      // spit이 fadeOut되면 hp가 -1씩 되도록
+      hp = hp - 1;
+      $('#hp').text('HP: ' + hp);
+      // 특정 조건일 때 벙커가 사라지도록
+      if (hp == 0) {
+        $('#bunker').fadeOut();
+      }
+    });
+    // (드론의 침 다시 발사하기 위해) 원래 자리로 되돌리기
+    $('#spit').css({ left: '150px' });
+  });
+</script>
