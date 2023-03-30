@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>변수</title>
+  </head>
+  <body>
+    <script>
+      let txt = 'abcdefghij';
+
+      // slice(시작인덱스, 종료인덱스) -> 시작인덱스부터 종료인덱스 -1번째까지 반환
+      console.log(txt.slice(1, 3)); // bc
+      console.log(txt.slice(3)); // defghij
+      console.log(txt.slice(3, 1)); // undefined (작동X)
+      console.log(txt.substring(3, 1)); // cdefg (-3이라는 것을 인식해서 2번째부터 -3번째 이전까지 잘라냄)
+
+      // substring(시작인덱스, 종료인덱스) -> 시작인덱스부터 종료인덱스 -1번째까지 반환
+      console.log(txt.substring(1, 3)); // bc
+      console.log(txt.slice(3)); // defghij
+      console.log(txt.substring(3, 1)); // bc (slice와 차이)
+      console.log(txt.substring(2, -3)); // ab (마이너스 값을 0으로 인식해서 두번쨰값까지 잘라냄)
+      // txt.substring(2, 0)가 된다
+
+      // substr는 지원이 중단된 문법이다.
+
+      let txt2 = 'paullab CEO leehojun CEO';
+
+      console.log(txt2.replace('CEO', 'COO')); // 앞에서 부터 한단어만 바꿈
+      console.log(txt2.replace('/CEO/g', 'COO')); // CEO가 들어간 모든 단어를 바꿈
+      // 구 브라우저 지원이 안될 가능성이 있기 때문에 회사가서 확인할 것
+      console.log(txt2.replaceAll('CEO', 'COO')); // CEO가 들어간 모든 단어를 바꿈
+
+      console.log(txt.toLowerCase()); // 모두 소문자로 바꿈
+      console.log(txt.toUpperCase()); // 모두 대문자로 바꿈
+
+      // 알고리즘 문제에서 많이 사용
+      console.log(txt2.includes('CEO')); // true
+      console.log(txt2.includes('CDO')); // false
+
+      // 메서드 체이닝
+      txt2.replace('CEO', 'CDO').includes('CDO').toString().toUpperCase(); //TURE
+
+      // 어디서나 정말 많이 사용되는 메서드
+      txt2.split(' '); // 띄어쓰기 단위로 잘려서 배열로 반환
+
+      let text1 = 'aa bb cc dd';
+      let text2 = 'aa-bb-cc-dd';
+      let text3 = 'aa,bb,cc,dd';
+      let text4 = 'aa,bb-cc-dd';
+
+      console.log(text1.split(' '));
+      console.log(text2.split('-'));
+      console.log(text3.split(','));
+      console.log(text4.split(/[,-]/g));
+      console.log(text4.replace(',', '-').split('-'));
+
+      // 자주 사용되진 않지만, 이걸 몰라서 직접 구현하면 번거로운 메서드
+      // trim
+      // 공백없게 하고 싶다면
+      let test = '                  hello world';
+      console.log(test.trim()); // 앞뒤 공백 제거
+
+      // https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String/padStart
+      // padStart
+      // 문자열의 시작을 다른 문자열로 채워 주어진 길이를 만족하는 새로운 문자열을 반환
+      let str1 = '99';
+      console.log(str1.padStart(5, '0')); // 00099
+
+      let str2 = '99';
+      console.log(str1.padStart(5, '-')); // ---99
+    </script>
+  </body>
+</html>

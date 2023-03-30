@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>변수</title>
+  </head>
+  <body>
+    <script>
+      // 원시타입string, number, bigint, boolean, undefined, symbol, null
+      let str1 = 'hello';
+      let str2 = str1;
+      console.log(str2); // 'hello'
+
+      str1 = 'world';
+      console.log(str2); // str2에 할당된 값은 여전히 'hello' 입니다.
+
+      // string
+      console.log(typeof 'hello');
+      // 이스케이프 문자
+      // \' 작은 따옴표
+      // \" 큰 따옴표
+      // \t 가로 탭
+      // \n 줄 바꿈
+      console.log(typeof "i'm so happy");
+      console.log('h\ne\nl\nl\no');
+
+      // number
+      console.log(typeof 10); // int
+      console.log(typeof 10.1); // float
+      console.log(typeof NaN); // number 반환
+
+      //boolean
+      console.log(typeof true);
+      console.log(typeof false);
+
+      // undefined
+      console.log(typeof undefined);
+      let a;
+      console.log(a);
+
+      // null(값이 비어있음을 명시적으로 나타냄)
+      console.log(typeof null); // object 반환 (설계오류인 것을 개발자가 인정)
+
+      // bigint(2^53 - 1 보다 큰 정수)
+      console.log(9007199254740996n + 9007199254740996n); // 이렇게 써야 맞는 계산이 나옴
+      console.log(9007199254740996 + 9007199254740996);
+      console.log(typeof 9007199254740996n); // bigint
+
+      // symbol
+      console.log(typeof Symbol());
+
+      //////////////////////////////
+
+      // 객체타입
+      // function
+      console.log(typeof function () {});
+
+      // object
+      console.log(typeof [10, 20, 30]); // object를 반환하지만 배열임
+      console.log(typeof { a: 10, b: 20, c: 30 }); // object
+      console.log(typeof /정규표현식/gi); // object
+
+      // 형변환 (다른 type -> number)
+      console.log(+'10'); // 실무에서 많이 쓰임
+      console.log(Number('10')); // 권장 X
+      console.log(parseInt('10')); // 권장
+      console.log(parseFloat('10.1')); // 권장 X
+      console.log(parseInt('true')); // NaN
+      console.log(parseInt('false')); // NaN
+      console.log(Number('true')); // 1
+      console.log(Number('false')); // 0
+
+      // 형변환 (다른 type -> string)
+      let one = 10;
+      console.log(one.toString());
+      // 10.toString() 10.까지를 소숫점으로 본다.
+      console.log('' + 10);
+      console.log(String(10));
+
+      // 형변환 (다른 type -> boolean)
+      console.log(Boolean(-1)); // true
+      console.log(Boolean(1000)); // true
+      console.log(Boolean(0)); // false
+      console.log(!!1000); // true
+      let ten = 10;
+      console.log(!!ten); // true
+    </script>
+  </body>
+</html>

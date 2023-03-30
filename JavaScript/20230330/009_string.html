@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>변수</title>
+  </head>
+  <body>
+    <script>
+      let txt = 'ABCDEFGHIJK';
+
+      console.log(txt + txt);
+      console.log(txt[0]); // A (Sass는 1부터 시작하지만 다른 프로그래밍 언어는 0부터 시작)
+      console.log(txt[2]); // C
+      console.log(txt[-1]); // js에서 마이너스 인덱싱을 허락하지 않음
+      console.log(txt.length);
+      console.log(txt.indexOf('E')); // 4 -> 인덱스 반환, 없는 값이라면 -1 출력
+      console.log(txt.search('E')); // 4 -> 인덱스 반한, 없는 값이라면 -1 출력
+
+      // 나중에 추가로 배운다
+      let regExp = /CD/;
+      console.log(txt.search(regExp)); // 2
+      console.log(txt.replace('ABC', 'hello')); // helloDEFGHIJK
+
+      // 대문자 찾기
+      let txt2 = 'abcdEfghijk';
+      let regExp2 = /[A-Z]/g;
+      console.log(txt2.search(regExp2)); // 4
+
+      // 대문자 바꾸기
+      let txt3 = 'abcdEfghijk';
+      let regExp3 = /[A-Z]/g;
+      console.log(txt3.replace(regExp3, 'e')); // abcdefghijk
+
+      // JavaScript Markdown Parser
+      // https://codepen.io/kvendrik/pen/bGKeEE
+      //h
+      // let md = '# hello world'
+      // md = md.replace(/[\#]{6}(.+)/g, '<h6>$1</h6>');
+      // md = md.replace(/[\#]{5}(.+)/g, '<h5>$1</h5>');
+      // md = md.replace(/[\#]{4}(.+)/g, '<h4>$1</h4>');
+      // md = md.replace(/[\#]{3}(.+)/g, '<h3>$1</h3>');
+      // md = md.replace(/[\#]{2}(.+)/g, '<h2>$1</h2>');
+      // md = md.replace(/[\#]{1}(.+)/g, '<h1>$1</h1>');
+
+      let md = '# hello world';
+      md = md.replace(/[\#]{1} (.+)/g, '<h1>$1</h1>');
+
+      let md2 = '# hello world';
+      md = md2.replace('# ', '<h1>') + '</h1>';
+    </script>
+  </body>
+</html>
