@@ -23,6 +23,7 @@ a {
 
 img {
   vertical-align: top;
+  width: 100%;
 }
 
 button {
@@ -39,7 +40,7 @@ button {
 
 .container {
   box-shadow: inset 0 0 10px rosybrown;
-  /* max-width: 1920px; */
+  /* max-width: 1920px;   */
 }
 
 header {
@@ -47,7 +48,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 26px;
+  padding: 26px 0;
 }
 
 .logo img {
@@ -70,6 +71,15 @@ header {
   gap: 30px;
 }
 
+.nav-menu {
+  display: none;
+}
+.nav-menu span {
+  width: 30px;
+  height: 2px;
+  background-color: black;
+}
+
 .nav-list a {
   font-size: 16px;
   font-weight: 400;
@@ -85,29 +95,119 @@ header {
   font-size: 16px;
 }
 
-@media (max-width: 1400px) {
-}
-
 /* section */
 .section-top {
   box-shadow: inset 0 0 10px green;
   background: #f2e9d8;
-  height: 900px;
+  /* height: 900px; */
   padding: 0 320px;
 }
 
 .l-section-top {
   display: flex;
   align-items: center;
+  gap: 128px;
+  box-shadow: inset 0 0 10px green;
+  justify-content: space-between;
 }
 
 .section-top-title {
   font-weight: 700;
   font-size: 48px;
+  box-shadow: inset 0 0 10px green;
+  margin-bottom: 40px;
+}
+
+.section-top-info {
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 40px;
+  line-height: 20px;
+  box-shadow: inset 0 0 10px green;
 }
 
 .section-top-img {
   max-width: 415px;
+  box-shadow: inset 0 0 10px green;
+}
+
+@media (max-width: 1800px) {
+  .section-top {
+    padding: 0 200px;
+  }
+
+  .l-section-top {
+    gap: 80px;
+  }
+}
+
+@media (max-width: 1220px) {
+  .section-top {
+    padding: 0 150px;
+  }
+
+  .section-top-img {
+    max-width: 350px;
+  }
+
+  .l-section-top {
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 40px;
+  }
+  .section-top-explain {
+    text-align: center;
+    margin: 0 32px;
+  }
+}
+@media (max-width: 900px) {
+  .section-top-title {
+    font-size: 34px;
+  }
+
+  .section-top-info {
+    font-size: 14px;
+  }
+
+  .section-top-img {
+    max-width: 197px;
+  }
+  .nav-bar,
+  .nav .btn-download {
+    display: none;
+  }
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    box-shadow: inset 0 0 10px green;
+  }
+}
+
+@media (max-width: 700px) {
+  .section-top {
+    padding: 0 20px;
+  }
+  header {
+    padding: 24px 0;
+  }
+
+  .logo img {
+    width: 92px;
+  }
+
+  .section-top-title {
+    font-size: 24px;
+  }
+
+  .section-top-info {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .section-top-img {
+    max-width: 197px;
+  }
 }
 
 .section-middle {
