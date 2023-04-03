@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 삼항연산자 ***
+      // 조건식 ? 참일 경우 실행되는 표현식 : 거짓일 경우 실행되는 표현식
+      const sale = true;
+      const price = sale ? 100 : 200;
+      console.log(price);
+
+      const price2 = 7000;
+      const message = price2 >= 50000 ? '비싸요' : '저렴해요';
+      console.log(message);
+
+      // 9000원 이상이면 비싸다.
+      // 9000원 미만, 7000원 이상이면 적절하다.
+      // 7000원 미만이면 저렴하다.
+      const price3 = 7500;
+      const message3 = price3 >= 9000 ? '비싸요' : price3 >= 7000 ? '적절해요' : '저렴해요';
+      console.log(message3);
+
+      // 드모르간 법칙
+      // 헷갈리는 연산 모음
+    </script>
+  </body>
+</html>
