@@ -55,6 +55,7 @@ body {
   max-width: 1224px;
   margin: 0 auto;
   position: relative;
+  box-shadow: inset 0 0 20px aqua;
 }
 
 /* header */
@@ -130,11 +131,31 @@ header {
   right: 32px;
   top: 18px;
 }
+/* TODO: 반응형 */
 
 /* section */
 .section1 {
   box-shadow: inset 0 0 20px goldenrod;
+  margin: 39px 0 109px;
+  padding-top: 60px;
+  box-sizing: border-box;
+  height: 500px;
+  background: url(image/main-img.png) no-repeat center center / contain;
+  background-color: #f0f0f2;
 }
+
+.section1-title {
+  box-shadow: inset 0 0 20px goldenrod;
+  width: 296px;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+  font-weight: 900;
+  font-size: 80px;
+  line-height: 100%;
+}
+
+/* TODO: */
 .section2 {
   box-shadow: inset 0 0 20px green;
 }
