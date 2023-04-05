@@ -1,0 +1,281 @@
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* TODO: 
+폰트 해결하기, 텍스트 컬러값 지정하기, 공통요소 묶어서 정리하기 */
+
+body,
+h1,
+h2,
+h3,
+div,
+p,
+ul,
+li,
+a,
+span {
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  vertical-align: top;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+body {
+  font-family: 'Pretendard-Regular';
+  font-weight: 400;
+  padding: 0 5rem;
+}
+
+.l-wrapper {
+  max-width: 1224px;
+  margin: 0 auto;
+  position: relative;
+  box-shadow: inset 0 0 20px aqua;
+}
+
+/* header */
+header {
+  box-shadow: inset 0 0 20px red;
+}
+
+.head-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: inset 0 0 10px blue;
+  padding: 30px 0;
+}
+
+.logo {
+  margin-right: 35px;
+}
+
+.logo-img {
+  width: 116px;
+}
+
+.nav-bar {
+  display: flex;
+  gap: 81px;
+  box-shadow: inset 0 0 10px blue;
+}
+
+.nav-item {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.login-btn {
+  margin-right: 5px;
+}
+
+.round-rect-btn {
+  font-weight: 400;
+  font-size: 16px;
+  padding: 6px 14px;
+  background: #eeeeee;
+  border-radius: 20px;
+  color: #29363d;
+}
+
+.login-btn .round-rect-btn {
+  /* font-weight: 700; */
+  color: #2e6ff2;
+}
+
+.search-wrapper {
+  box-shadow: inset 0 0 20px goldenrod;
+  text-align: center;
+  width: 600px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.search-input {
+  border: 4px solid #eeeeee;
+  border-radius: 40px;
+  padding: 18px 32px;
+  box-sizing: border-box;
+  width: 100%;
+  color: #5a6a72;
+  font-size: 16px;
+}
+
+.search-input-btn {
+  position: absolute;
+  right: 32px;
+  top: 18px;
+}
+/* TODO: 반응형 */
+
+/* section1 */
+.section1 {
+  box-shadow: inset 0 0 20px goldenrod;
+  margin: 39px 0 109px;
+  padding-top: 60px;
+  box-sizing: border-box;
+  height: 500px;
+  background: url(image/main-img.png) no-repeat center center / contain;
+  background-color: #f0f0f2;
+}
+
+.section1-title {
+  box-shadow: inset 0 0 20px goldenrod;
+  width: 296px;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+  font-weight: 900;
+  font-size: 80px;
+  line-height: 100%;
+}
+
+/* section2 */
+.section2 {
+  box-shadow: inset 0 0 20px green;
+  display: flex;
+}
+
+.notice-article {
+  max-width: 768px;
+  box-sizing: border-box;
+  padding-right: 40px;
+  border-left: 2px solid #eee;
+  box-shadow: inset 0 0 20px fuchsia;
+}
+
+.notice-title,
+.launching-book-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.notice-title h2,
+.launching-book-title h2 {
+  font-weight: 700;
+  font-size: 30px;
+  box-shadow: inset 0 0 10px fuchsia;
+}
+.add-btn-box {
+  box-shadow: inset 0 0 10px fuchsia;
+}
+.add-btn {
+  background: url(image/add.png) no-repeat center / 14px;
+  box-shadow: inset 0 0 10px fuchsia;
+  width: 14px;
+  height: 14px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.notice-lists {
+  margin-top: 22px;
+}
+.notice-lists li:first-child {
+  border-top: 1px solid #eee;
+}
+.notice-lists li {
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  padding: 17px 16px;
+  justify-content: space-between;
+}
+.notice-content {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* 말줄임표
+.ellipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+} */
+.notice-content strong {
+  color: #2e6ff2;
+  margin-right: 16px;
+  font-weight: 700;
+}
+.notice-date {
+  flex-shrink: 0;
+  margin-left: 41px;
+}
+
+.launching-book-article {
+  box-shadow: inset 0 0 20px fuchsia;
+  margin-left: 40px;
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+
+.turn-btns {
+  box-shadow: inset 0 0 20px greenyellow;
+}
+
+.previous-btn {
+  background: url(image/previous.png) no-repeat center / contain;
+  height: 12px;
+}
+.pause-btn {
+  background: url(image/pause.png) no-repeat center / contain;
+  height: 12px;
+}
+.next-btn {
+  background: url(image/previous.png) no-repeat center / contain;
+  transform: rotate(180deg);
+  height: 12px;
+}
+
+.launching-book-banner {
+  margin-top: 26px;
+  display: block;
+}
+
+/* section3 */
+.section3 {
+  box-shadow: inset 0 0 20px greenyellow;
+}
+
+/* aside */
+.ad-imgs {
+  box-shadow: inset 0 0 20px royalblue;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  right: -148px;
+  top: 85px;
+}
+
+/* footer */
+footer {
+  box-shadow: inset 0 0 20px red;
+}
