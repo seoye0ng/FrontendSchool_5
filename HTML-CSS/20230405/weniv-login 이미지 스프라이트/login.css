@@ -1,0 +1,278 @@
+/* reset */
+body,
+div,
+form,
+h1,
+h2,
+p,
+input,
+button,
+a,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.a11y-hidden {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+
+/* style */
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container {
+  width: 520px;
+  box-sizing: border-box;
+  /* padding: ; */
+  border: 1px solid #c4c4c4;
+  border-radius: 10px;
+}
+
+/* head */
+.login-head {
+  border-bottom: 1px solid #c4c4c4;
+  position: relative;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.login-title {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.close-btn {
+  width: 1em;
+  height: 1em;
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background: none;
+}
+
+.close-btn img {
+  width: 1em;
+}
+
+/* form */
+article {
+  padding: 26px 24px 25px;
+}
+
+.login-form-title {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.input-wrapper {
+  margin-top: 24px;
+}
+
+.input-id,
+.input-pw {
+  width: 472px;
+  padding: 15px 16px;
+  box-sizing: border-box;
+  background: #ffffff;
+  border: 1px solid #c4c4c4;
+  border-radius: 5px;
+}
+
+.input-id::placeholder,
+.input-pw::placeholder {
+  color: #767676;
+}
+
+.input-id {
+  margin-bottom: 10px;
+}
+
+.input-ckb-box {
+  margin: 17px 0 21px;
+}
+
+.label-ckb::before {
+  content: '';
+  display: inline-block;
+  vertical-align: -5px;
+  margin-right: 8px;
+  width: 22px;
+  height: 22px;
+  /* background: url(image/check-box-before.png) no-repeat 0 0 / 22px; */
+  /* sprites */
+  /* background: url('image/css_sprites.png') -10px -10px; */
+  /* retina */
+  background: url('image/css_sprites_retina.png') -10px -10px / 84px 42px;
+  /* transition: all 0.2s ease; */
+}
+
+.label-ckb {
+  font-weight: 500;
+  font-size: 16px;
+  color: #767676;
+  cursor: pointer;
+}
+
+.input-ckb:checked + .label-ckb::before {
+  /* background: url(image/check-box.png) no-repeat 0 0 / contain; */
+  /* sprites */
+  /* background: url('image/css_sprites.png') -52px -10px; */
+  /* retina */
+  background: url('image/css_sprites_retina.png') -52px -10px / 84px 42px;
+}
+
+/* 포커싱 아웃박스 만들기 */
+
+.login-btn {
+  width: 100%;
+  background: #2f80ed;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 18px;
+  color: #fff;
+  padding: 14px 211px;
+  margin-bottom: 20px;
+}
+
+.find-login-btns {
+  text-align: center;
+  font-weight: 400;
+  font-size: 14px;
+  color: #767676;
+}
+
+.find-login-btns span {
+  margin: 0 12px;
+}
+
+/* links */
+.link-wrapper {
+  margin-top: 30px;
+  color: #767676;
+  text-align: center;
+}
+
+.link-p {
+  font-weight: 400;
+  font-size: 14px;
+  background-color: #fff;
+  box-shadow: inset 0 0 10px red;
+}
+
+.link-p::before,
+.link-p::after {
+  content: '';
+  display: inline-block;
+  width: 210px;
+  height: 1px;
+  vertical-align: middle;
+  background-color: #c4c4c4;
+}
+
+.link-p::before {
+  margin-right: 13px;
+}
+
+.link-p::after {
+  margin-left: 13px;
+}
+
+.login-type-list {
+  margin-top: 20px;
+}
+
+.login-link {
+  display: block;
+  border: 1px solid #767676;
+  border-radius: 5px;
+  padding: 15px;
+  box-sizing: border-box;
+  width: 100%;
+  position: relative;
+}
+
+.login-type-list li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.login-facebook {
+  border-color: #2d9cdb;
+}
+.login-naver {
+  border-color: #00bf18;
+}
+.login-kakao {
+  border-color: #f2c94c;
+}
+
+.login-goole::before,
+.login-facebook::before,
+.login-naver::before,
+.login-kakao::before {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  left: 25px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.login-goole::before {
+  /* background: url(image/google.png) no-repeat center; */
+  /* sprites */
+  /* background: url('image/css_sprites_logos.png') -10px -58px; */
+  /* retina */
+  background: url('image/css_sprites_logo_retina.png') -10px -57px / 48px;
+}
+.login-facebook::before {
+  /* background: url(image/facebook.png) no-repeat center; */
+  /* sprites */
+  /* background: url('image/css_sprites_logos.png') -10px -10px; */
+  /* retina */
+  background: url('image/css_sprites_logo_retina.png') -5px -154px / 48px;
+}
+.login-naver::before {
+  /* background: url(image/naver-logo.png) no-repeat center; */
+  /* sprites */
+  /* background: url('image/css_sprites_logos.png') -10px -154px; */
+  /* retina */
+  background: url('image/css_sprites_logo_retina.png') -10px -105px / 48px;
+}
+.login-kakao::before {
+  /* background: url(image/message-circle.png) no-repeat center; */
+  /* sprites */
+  /* background: url('image/css_sprites_logos.png') -10px -106px; */
+  /* retina */
+  background: url('image/css_sprites_logo_retina.png') -10px -10px / 48px;
+}
