@@ -1,3 +1,18 @@
+// 컨벤션
+// https://github.com/airbnb/javascript#iterators-and-generators
+// 11.1 : 순회 대신 메서드
+// 15.1 : 비교
+// 18.1, 18.4, 18.5 : 코멘트
+// 19.1 : 공백
+
+// https://google.github.io/styleguide/jsguide.html#features-for-loops :
+// 반복구문에서는 가능하면 for of, object에서는 for in
+
+// https://ui.toast.com/fe-guide/ko_CODING-CONVENTION#for-in%EB%AC%B8-%EC%95%88%EC%97%90%EC%84%9C%EB%8A%94-hasownproperty-%EC%A1%B0%EA%B1%B4-%EA%B2%80%EC%82%AC%EB%A5%BC-%EC%88%98%ED%96%89%ED%95%9C%EB%8B%A4 :
+// 반복구문에서는 hasOwnProperty 조건 검사를 수행
+
+// https://ko.javascript.info/array#ref-830(모던자바스크립트): Array 순회에서 권하지 않음
+
 for (let i = 0; i < 10; i++) {
   console.log(10);
 }
@@ -7,8 +22,8 @@ for (let i = 0; i < arr.length; i++) {
   console.log(arr[i]);
 }
 
-// airbnb 컨벤션에 권장
 // IE에서도 사용 가능
+// 배열에서는 쓰지 않기를 권고하며 객체에서 사용할 것을 권장
 const arr1 = [10, 20, 30, 40, 50];
 const obj1 = { one: 10, two: 20 };
 
@@ -26,9 +41,9 @@ for (const i in '.'.repeat(101)) {
   s += parseInt(i);
 }
 
-// airbnb 컨벤션에 권장
 // IE에서도 사용 불가능
 // 개발자의 행복을 위해서 익스플로러를 버리자 => 이렇게 해야만 사용할 수 있다
+// 많은 컨벤션에서 권장(다만 배열의 순회는 map, forEach를 더 권장)
 const arr2 = [10, 20, 30, 40, 50];
 const obj2 = { one: 10, two: 20 };
 
@@ -237,6 +252,12 @@ console.log((yyyy / user2.length).toFixed(2));
 !!NaN; // false
 !!undefined; // false
 !!null; // false
+
+// || : 0, null, undefined, false, NaN, '', etc...
+// ?? : null, undefined
+
+// falsy하다 : 0, null, undefined, false, NaN, '', etc...
+// nullish하다 : null, undefined
 
 ////// 외울 코드 /////
 user2
