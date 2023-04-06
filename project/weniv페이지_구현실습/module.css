@@ -1,13 +1,17 @@
 .card-article {
   width: 288px;
   border-radius: 8px;
-  /* box-sizing: border-box; */
-  box-shadow: inset 0 0 10px darkblue;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in;
+}
+
+.card-article:hover {
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.3);
 }
 
 /* header */
 .card-header {
-  box-shadow: inset 0 0 10px firebrick;
   display: flex;
   align-items: center;
   gap: 16px;
@@ -34,7 +38,6 @@
   background: url(image/card-img1.png) no-repeat center / contain;
   width: 100%;
   height: 196px;
-  box-shadow: inset 0 0 10px salmon;
 }
 .card-text {
   padding: 10px 16px 0;
@@ -59,7 +62,6 @@
 
 /* footer */
 .card-footer-box {
-  box-shadow: inset 0 0 10px aquamarine;
   padding: 19px 22px 23px;
   display: flex;
   justify-content: space-between;
@@ -84,22 +86,26 @@
   display: flex;
   gap: 20px;
   align-items: center;
-  box-shadow: inset 0 0 10px aquamarine;
 }
-.heart-icon {
+
+.card-icons span {
   display: inline-block;
+  cursor: pointer;
+}
+
+.heart-icon {
   background: url(image/favorite.png) no-repeat 0 0;
   width: 22px;
   height: 20px;
 }
+
 .share-icon {
-  display: inline-block;
   background: url(image/share.png) no-repeat 0 0;
   width: 18px;
   height: 20px;
 }
+
 .more-icon {
-  display: inline-block;
   background: url(image/more_vertical.png) no-repeat 0 0;
   width: 4px;
   height: 16px;

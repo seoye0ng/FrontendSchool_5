@@ -265,6 +265,28 @@ header {
 /* section3 */
 .section3 {
   box-shadow: inset 0 0 20px greenyellow;
+  margin-top: 123px;
+}
+
+.news-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 38px;
+}
+
+.news-title h2 {
+  font-weight: 700;
+  font-size: 30px;
+}
+.news-title button {
+  margin-right: 9px;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px 24px;
 }
 
 /* aside */
