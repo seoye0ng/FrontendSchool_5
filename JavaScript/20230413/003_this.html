@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <button id="btn1">클릭해봐요!</button>
+    <button id="btn2">클릭해봐요!</button>
+    <script>
+      let myObj = {
+        val1: 100,
+        func1: function () {
+          console.log(this);
+        },
+      };
+
+      let test = myObj.func1;
+
+      let button1 = document.getElementById('btn1');
+      button1.addEventListener('click', myObj.func1);
+      //  button 안에 myObj.func1이 들어온거기 때문에 button이 출력
+      //  myObj.func1에서 가라키고 있는 함수를 button이 클릭 됐을 때 직접 실행하기 된 것
+      //  button1.callback = myObj.func1;
+
+      let button2 = document.getElementById('btn2');
+      button2.addEventListener('click', test);
+    </script>
+  </body>
+</html>
