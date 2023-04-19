@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    <link rel="stylesheet" href="" />
+  </head>
+
+  <body>
+    <script>
+      //   const me = {
+      //     name: 'seoyeong',
+      //     address: '양천로63길 8',
+      //     phoneNum: '010-2057-9265',
+      //     sayHello: function () {
+      //       console.log(`Hello! ${this.name}`);
+      //     },
+      //     codingSkill: function (skill) {
+      //       skill.levelUp();
+      //     },
+      //   };
+
+      //   const myCodingSkill = {
+      //     level: 1,
+      //     levelUp: function () {
+      //       console.log(this.level++);
+      //     },
+      //   };
+
+      //   me.sayHello();
+      //   me.codingSkill(myCodingSkill);
+
+      function NewFactory(name) {
+        this.name = name;
+        this.sayYourName = function () {
+          console.log(`삐리비리. 제 이름은 ${this.name}입니다. 주인님.`);
+        };
+      }
+
+      let robot1 = new NewFactory('브랜든');
+
+      // 프로토타입으로 정의하기
+      function Me() {
+        this.name = 'seoyeong';
+        this.address = '양천로63길 8';
+        this.phoneNum = '010-2057-9265';
+      }
+
+      Me.prototype.sayHello = function () {
+        console.log(`Hello! ${this.name}`);
+      };
+
+      const me1 = new Me();
+
+      // class로 정의하기
+      class Me2 {
+        constructor() {
+          this.name = 'seoyeong';
+          this.address = '양천로63길 8';
+          this.phoneNum = '010-2057-9265';
+        }
+
+        sayHi() {
+          console.log(`Hello! ${this.name}`);
+        }
+      }
+
+      const me2 = new Me2();
+    </script>
+  </body>
+</html>

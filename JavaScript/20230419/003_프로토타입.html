@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    <link rel="stylesheet" href="" />
+  </head>
+
+  <body>
+    <!-- 음식 이름의 배열을 전달하면 배열안에서 랜덤하게 메뉴를 뽑아내는 기능을 가진 로봇객체의 생성자를 만들어보세요. 예를들어 new
+    FoodPicker(['짜장면', '청국장', '김치찌게']) 이렇게 인스턴스를 만들면 인스턴스는 짜장면, 청국장, 김치찌게 중에 한 가지 메뉴를
+    랜덤하게 콘솔로 출력하는 기능을 가져야합니다. -->
+    <script>
+      function Seoyeong() {
+        this.age = '26';
+      }
+
+      // 프로토타입으로 프로퍼티나 메서드를 할당하면 생성된 인스턴스들은 모두 같은 프로토타입을 참조한다.
+      Seoyeong.prototype.name = '서영';
+
+      const robot1 = new Seoyeong();
+      const robot2 = new Seoyeong();
+      const robot3 = new Seoyeong();
+
+      // 인스턴스로 접근할 땐 __porto__로 접근 -> 모든 인스턴스들의 name이 바뀜
+      robot1.__proto__.name = 'seoyeong';
+    </script>
+  </body>
+</html>
