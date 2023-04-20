@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+
+  <body>
+    <script>
+      class Sausage {
+        constructor(food1, food2) {
+          this.name1 = food1; // 여기서 디스는 인스턴스를 가리킴
+          this.name2 = food2;
+        }
+
+        taste() {
+          console.log(`${this.name1}과 ${this.name2} 맛이 난다!`);
+        }
+      }
+
+      class FireSausage extends Sausage {
+        constructor(food1, food2, food3) {
+          super(food1, food2);
+          this.name3 = food3;
+        }
+
+        // 오버로딩
+
+        // 오버라이딩
+        taste() {
+          console.log(`${this.name1}와 ${this.name2}과 ${this.name3} 맛과 불 맛이 난다!`);
+        }
+      }
+
+      const s1 = new Sausage('콩나물국밥', '마라탕');
+      s1.taste();
+
+      const s2 = new FireSausage('김치찌개', '짜장면', '탕수육');
+      s2.taste();
+    </script>
+  </body>
+</html>

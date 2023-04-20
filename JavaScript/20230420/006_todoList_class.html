@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+
+  <body>
+    <script>
+      //  1. 할 것 객체
+      class Todo {
+        constructor(item, finished) {
+          // 입력받을 내용
+          this.item = item;
+          // 입력받을 상태
+          this.finished = finished;
+        }
+
+        // 상태를 변경
+        changeState() {
+          this.finished = !this.finished; // 부정연산자를 사용해 true일 땐 false, false일 땐 true로 변경
+        }
+      }
+
+      class TodoManager {
+        constructor() {
+          // 할일 목록
+          this.todoList = [];
+        }
+
+        // 할 일 저장 (todo 생성)
+        // 미리 finished를 할당연산자로 false로 초기화 -> 인스턴스 생성할 때 인자 item만 전달해도 됨
+        addItem(item, finished = false) {
+          const todo = new Todo(item, finishied); // addItem이 실행되면 자동으로 todo의 인스턴스 생성
+          this.todoList.push(todo);
+        }
+
+        // 할 일 목록 보여주기
+        getItems() {
+          return this.todoList;
+        }
+
+        // 할 일 남은 갯수 반환 reduce 1
+        getLeftTodoCount() {
+          return this.todoList.reduce((total, current) => {
+            if (current.finished === false) {
+              return ++total; // false면 +1
+            } else {
+              return total; // true면 원래값
+            }
+          }, 0);
+        }
+        // 할 일 남은 갯수 반환 reduce 2
+        getLeftTodoCount() {
+          return this.todoList.reduce((total, current) => (current.finished === false ? ++total : total), 0);
+        }
+        // 할 일 남은 갯수 반환 filter // 조건을 통과한 요소들의 배열을 리턴
+        getLeftTodoCount() {
+          return this.todoList.filter((item) => item.finished === false).length;
+        }
+      }
+    </script>
+  </body>
+</html>
