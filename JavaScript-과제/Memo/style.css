@@ -1,0 +1,84 @@
+body,
+div,
+h1,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+body {
+  /* background-color: #077753; */
+  background-color: #7ca4a3;
+}
+
+.wrapper {
+  margin: 100px auto;
+  padding: 40px 26px;
+  box-sizing: border-box;
+  width: 1400px;
+  /* background: url(background.jpg) no-repeat 0 0 / cover; */
+  background-color: #3f5e5e;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  box-shadow: 8px 15px 20px 5px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-memo-section {
+  box-shadow: inset 0 0 20px yellow;
+}
+
+.title-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title-layout h1 {
+  color: aliceblue;
+  font-size: 50px;
+  font-weight: 500;
+}
+
+.title-layout button {
+  font-size: 20px;
+  width: 30px;
+  height: 30px;
+  background-color: #dcdcda;
+  border-radius: 50%;
+}
+
+#editor {
+  width: 800px;
+  background: #f1f1f1;
+}
+
+.memo-list-section {
+  box-shadow: inset 0 0 10px yellow;
+}
+
+.memo-list li {
+  width: 500px;
+  padding: 10px 16px;
+  box-sizing: border-box;
+  color: aliceblue;
+  background-color: #e1893d;
+  /* background-color: #fbce49; */
+  /* background-color: #dcdcda; */
+  border-radius: 5px;
+  /* box-shadow: inset 0 0 10px yellow; */
+}
+
+.memo-list li:not(:last-child) {
+  margin-bottom: 20px;
+}
