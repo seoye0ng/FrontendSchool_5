@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memo</title>
+    <link rel="stylesheet" href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css" />
+    <script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <section class="main-memo-section">
+        <div class="title-container">
+          <h1>Memo</h1>
+          <button onclick="addMemo()" class="add-btn">+</button>
+        </div>
+        <div class="editor-container">
+          <input class="memo-title" type="text" />
+          <div id="editor"></div>
+        </div>
+      </section>
+      <section class="memo-list-section">
+        <ul class="memo-list"></ul>
+      </section>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
