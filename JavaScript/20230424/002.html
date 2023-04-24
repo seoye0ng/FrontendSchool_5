@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+
+  <body>
+    <div id="parent"></div>
+
+    <script>
+      const parent = document.querySelector('#parent');
+      const txt = document.createElement('p');
+      txt.textContent = 'abcde!';
+      const frag = document.createDocumentFragment();
+      // 가상 DOM -> 메모리상에만 존재하는 DOM 트리
+
+      frag.append(txt);
+      parent.append(frag);
+    </script>
+  </body>
+</html>

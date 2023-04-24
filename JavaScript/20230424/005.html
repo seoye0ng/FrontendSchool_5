@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+
+  <body>
+    <script>
+      const aespa = ['카리나', '윈터', '지젤', '닝닝'];
+      // 결과 : ['카리나💖', '윈터💖', '지젤💖', '닝닝💖']
+
+      const aespapa = aespa.map((el) => el + '💖');
+      console.log(aespapa);
+      console.log(aespa);
+
+      //   forEach를 사용하면 원본배열을 훼손시킬 수 있으므로 map을 사용해 새로운 배열을 만들어 주는게 좋다.
+      //   aespa.forEach((el, i) => aespa[i] = el + '💖');
+    </script>
+  </body>
+</html>
