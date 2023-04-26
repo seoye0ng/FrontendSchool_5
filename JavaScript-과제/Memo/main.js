@@ -13,7 +13,6 @@ const editor = new Editor({
 
 showMemo();
 
-
 // 메모 추가하기
 function addMemo() {
   const title = document.querySelector('.memo-title').value;
@@ -56,5 +55,27 @@ function showMemo() {
         localStorage.setItem('memos', JSON.stringify(memos));
       }
     });
+
+    allDelete();
   }
 }
+
+// 전체 삭제하기
+function allDelete() {
+  const deleteBtnContainer = document.querySelector('.delete-btn-container');
+  const allDeleteBtn = document.createElement('button');
+  allDeleteBtn.innerHTML = '<i class="fa-regular fa-trash-can"></i>';
+
+  if (memos.length === 1) {
+    deleteBtnContainer.appendChild(allDeleteBtn);
+    allDeleteBtn.addEventListener('click', () => {
+      if (confirm('정말로 전체 삭제 하시겠습니까?')) {
+        localStorage.clear();
+        memos = [];
+        deleteBtnContainer.removeChild(allDeleteBtn);
+        showMemo();
+      }
+    });
+  }
+}
+
