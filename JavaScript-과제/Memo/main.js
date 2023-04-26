@@ -5,19 +5,23 @@ const Editor = toastui.Editor;
 
 const editor = new Editor({
   el: document.querySelector('#editor'),
-  height: '500px',
+  height: '300px',
   initialEditType: 'markdown',
   previewStyle: 'vertical',
+  placeholder: '메모를 입력해 주세요.',
 });
 
-// addMemo
+// 메모 추가하기
 function addMemo() {
   const title = document.querySelector('.memo-title').value;
   const content = editor.getHTML();
 
   memos.push({ title, content });
   localStorage.setItem('memos', JSON.stringify(memos));
-  showMemo();
-}
 
-// showMemo
+  showMemo();
+
+  // 인풋값 초기화 해주기
+  document.querySelector('.memo-title').value = '';
+  editor.setHTML() = '';
+}
