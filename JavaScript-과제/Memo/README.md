@@ -1,4 +1,4 @@
-# 메모장
+# 📝 메모장
 
 1. toastui로 메모 입력받기
 
@@ -15,3 +15,5 @@
    - 전체 삭제하기
 
 4. 모드변경 toggle 버튼
+
+URL : https://seoye0ng.github.io/FrontendSchool_5/JavaScript-%EA%B3%BC%EC%A0%9C/Memo/
