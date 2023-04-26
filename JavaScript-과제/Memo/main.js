@@ -12,6 +12,7 @@ const editor = new Editor({
 });
 
 showMemo();
+changeMode();
 
 // 메모 추가하기
 function addMemo() {
@@ -78,4 +79,23 @@ function allDelete() {
     });
   }
 }
+
+// dark-mode-toggle
+function changeMode() {
+  const toggleBtn = document.querySelector('.toggle');
+  const body = document.body.classList;
+  
+  toggleBtn.addEventListener('click', () => {
+      if (body.contains('dark-mode')) {
+        body.remove('dark-mode');
+        toggleBtn.innerHTML = '<i class="fas fa-moon"></i>';
+      } else {
+        body.add('dark-mode');
+        toggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
+      }
+    },
+    false
+  );
+}
+
 
