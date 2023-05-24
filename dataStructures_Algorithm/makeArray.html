@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    <link rel="stylesheet" href="" />
+  </head>
+
+  <body>
+    <script>
+      class UltraArray {
+        constructor() {
+          this.data = {};
+          this.length = 0;
+        }
+        push(item) {
+          this.data[this.length] = item; // {0:item, 1:item, 2:item}
+          this.length++;
+          return this.length;
+        }
+
+        pop() {
+          const lastState = this.data[this.length - 1];
+          delete this.data[this.length - 1];
+          this.length--;
+          return lastState;
+        }
+
+        // 인덱스 숫자로 속성을 제거
+        deleteWithIndex(index) {
+          const removedItem = this.data[index];
+          // delete this.data[index];
+          this.changeOrderItems(index);
+          return removedItem;
+        }
+
+        // 인덱스를 정리하고 속성을 제거
+        changeOrderItems(index) {
+          // 길이 제거
+          this.length--;
+          for (let i = index; i < this.length; i++) {
+            // 뒤에 있는 인덱스를 앞으로 당기기
+            this.data[i] = this.data[i + 1];
+          } // for문이 들어가면 선형 시간(Linear time): O(n) 시간복잡도를 가짐
+          // 대상 제거
+          delete this.data[this.length];
+        }
+      }
+
+      const myArray = new UltraArray();
+
+      myArray.push(10);
+      myArray.pop();
+    </script>
+  </body>
+</html>

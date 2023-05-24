@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    <link rel="stylesheet" href="" />
+  </head>
+
+  <body>
+    <script>
+      //  1. 두 변수값을 바꾸는 방법
+      let a = 'hello';
+      let b = 'lions';
+      let c;
+      c = a;
+      a = b;
+      b = c;
+
+      //   2. 새로운 변수를 사용하지 않고 바꾸는 방법
+      let a1 = 10;
+      let b1 = 20;
+
+      // - 구조분해 할당
+      [a1, b1] = [b1, a1]; // 방법 1
+
+      A = [a1, b1];
+      b1 = A[0];
+      a1 = A[1];
+
+      // - 숫자의 특성을 이용해서
+      a1 = a1 + b1; // a1 : 40
+      b1 = a1 - b1; // b1 : 10
+      a1 = a1 - b1; // 40 - 10
+    </script>
+  </body>
+</html>
