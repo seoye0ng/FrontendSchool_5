@@ -57,15 +57,15 @@ html
         // 회원가입하려면?
         // 회원가입을 위한 데이터를 모아야 함 - api 요청했던 거
         /*{
-		    "user": {
-				"username": String*,
-				"email": String*,
-				"password": String*,
-				"accountname": String*,
-				"intro": String,
-				"image": String // 예시) https://mandarin.api.weniv.co.kr/1641906557953.png
-		    }
-        }*/
+          "user": {
+        "username": String*,
+        "email": String*,
+        "password": String*,
+        "accountname": String*,
+        "intro": String,
+        "image": String // 예시) https://mandarin.api.weniv.co.kr/1641906557953.png
+          }
+            }*/
 
         // 최종목표 : 감귤마켓 시작하기를 눌렀을 때 회원가입이 되어야 함
         // 1. 버튼을 클릭했을 때 뭐가 일어나야 함
@@ -77,8 +77,28 @@ html
           const userName = userNameInput.value;
           const userId = userIdInput.value;
           const userIntro = userIntroInput.value;
-          console.log('클릭이 되었다.');
-          console.log(email, password, userName, userId, userIntro);
+
+          const data = {
+            user: {
+              username: userName,
+              email: email,
+              password: password,
+              accountname: userId,
+              intro: userIntro,
+              image: '',
+            },
+          };
+
+          //   fetch 안에 들은게 요청, then 안에 들은게 응답
+          fetch('http://api.mandarin.weniv.co.kr/user', {
+            method: 'POST',
+            headers: {
+              'Content-type': 'application/json',
+            },
+            body: JSON.stringify(data),
+          })
+            .then((res) => res.json())
+            .then((json) => console.log(json));
         });
         // 저 회원가입을 하기 위해서는 입력창에 있는 값들을 가져와야함.
 
