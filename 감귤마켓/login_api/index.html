@@ -71,7 +71,8 @@ html
         // 1. 버튼을 클릭했을 때 뭐가 일어나야 함
         // 1-1. 버튼을 찾자
         const btnSubmit = document.querySelector('.submit-btn');
-        btnSubmit.addEventListener('click', () => {
+
+        const handleBtnSubmit = () => {
           const email = emailInput.value;
           const password = passwordInput.value;
           const userName = userNameInput.value;
@@ -85,7 +86,7 @@ html
               password: password,
               accountname: userId,
               intro: userIntro,
-              image: '',
+              image: imageUrl,
             },
           };
 
@@ -99,8 +100,9 @@ html
           })
             .then((res) => res.json())
             .then((json) => console.log(json));
-        });
-        // 저 회원가입을 하기 위해서는 입력창에 있는 값들을 가져와야함.
+        };
+
+        btnSubmit.addEventListener('click', handleBtnSubmit);
 
         // 2. 버튼을 클릭했을 때 인풋 데이터를 받아와야 함
         // 2-1. 인풋 요소를 선택
@@ -109,6 +111,24 @@ html
         const userNameInput = document.querySelector('#userNameInput');
         const userIdInput = document.querySelector('#userIdInput');
         const userIntroInput = document.querySelector('#userIntroInput');
+        const imageUrl = document.querySelector('#imagePre').src;
+
+        // 이미지 업로드
+        const imageInput = document.querySelector('#profileImg');
+        // 언제 파일 업로드가 이뤄지나?
+        // 내가 input에서 파일을 선택했을 때
+        const handleImageInput = async (e) => {
+          const formData = new FormData();
+          const imageFile = e.target.files[0];
+          formData.append('image', imageFile);
+          const res = await fetch('http://api.mandarin.weniv.co.kr/image/uploadfile', {
+            method: 'POST',
+            body: formData,
+          });
+          const json = await res.json();
+          document.querySelector('#imagePre').src = 'http://api.mandarin.weniv.co.kr/' + json.filename;
+        };
+        imageInput.addEventListener('change', handleImageInput);
       </script>
     </body>
   </html>
